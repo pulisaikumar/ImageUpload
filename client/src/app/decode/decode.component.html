@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>Fetching Image from URL Demo</h2>
+  <hr>
+
+  <div class="form-group">
+    <label>Enter Image URL</label>
+    <input #imageURL type="text" >
+    <input (click)="getImage(imageURL.value)" type="submit">
+  </div>
+  <hr>
+  <h3>Output</h3>
+  <hr>
+  <div *ngIf="imageURL.value">
+    <p ><b>Original URL :</b></p>
+    <p>{{imageURL.value}}</p>
+  </div>
+  <div *ngIf="base64DefaultURL">
+    <p ><b>Default Base64 URL</b></p>
+    <p>{{base64DefaultURL}}</p>
+  </div>
+  <div *ngIf="base64TrimmedURL">
+    <p ><b>Trimmed Base64 URL</b></p>
+    <p>{{base64TrimmedURL}}</p>
+    <hr>
+  </div>
+</div>

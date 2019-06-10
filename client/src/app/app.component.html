@@ -1,1 +1,6 @@
-<input type="file" id="filePicker" (change)="handleFileSelect($event)">
+
+<div class="container" style="padding: 50px">
+  <h1>Image to base64 generation</h1>
+  <input type="file" id="filePicker" (change)="handleFileSelect($event)">
+  <app-decode></app-decode>
+</div>
